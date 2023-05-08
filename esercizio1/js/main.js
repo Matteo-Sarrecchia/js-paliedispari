@@ -1,6 +1,7 @@
 // Chiedere all’utente di inserire una parola
 const parolaUser = prompt("Inserisci una parola");
 console.log(parolaUser);
+document.getElementById("containerUSer").innerHTML = parolaUser;
 
 // Creare una funzione per capire se la parola inserita è palindroma
 
@@ -35,5 +36,7 @@ function verificaParolaPalindroma (string){
     } else return  parolaUser + " NON é una parola palindroma"
 };
 
+let risultato = verificaParolaPalindroma(parolaUser);
+console.log(risultato)
 
-console.log(verificaParolaPalindroma(parolaUser));
+document.getElementById("containerRisultato").innerHTML = risultato;
